@@ -8,7 +8,7 @@ const useFetch = (url) => {
     const [data, setData] = useState([]);
     const [error, setError] = useState(null); 
 
-
+    console.log(url);
     useEffect(() => {
         const abortConst = new AbortController();
 
