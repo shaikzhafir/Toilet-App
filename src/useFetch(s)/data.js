@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import API_URL from '../helper/url'
 
 const lala = () => {
     return 'lol'
@@ -8,11 +9,11 @@ const useFetch = (url) => {
     const [data, setData] = useState([]);
     const [error, setError] = useState(null); 
 
-    console.log(url);
+    
     useEffect(() => {
         const abortConst = new AbortController();
 
-        fetch(url, {signal: abortConst.signal})
+        fetch(API_URL + url, {signal: abortConst.signal})
         .then(res => {
             console.log(res)
             if(!res.ok){

@@ -6,7 +6,7 @@ import Carousel from './carousel/Carousel'
 import ReactStars from "react-rating-stars-component";
 
 const Home = () => {
-    const { data, error } = useFetch('https://ntu-toilet-app.herokuapp.com/api/toilets')
+    const { data, error } = useFetch('/api/toilets')
     data.sort((a, b) => b.rating - a.rating)
 
     // output of html
